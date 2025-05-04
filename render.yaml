@@ -14,16 +14,16 @@ services:
       - key: APP_ENV
         value: production
       - key: APP_KEY
-        value: base64:tu-clave-generada
+        value: base64:ljPC1IAQ/8WUd5nQad27DyNHSrRU0E3yDF6rgzf3S3E=
       - key: DB_CONNECTION
-        value: mysql
+        value: pgsql
       - key: DB_HOST
-        value: tu-host
+        value: shortline.proxy.rlwy.net
       - key: DB_PORT
-        value: 3306
+        value: 35084
       - key: DB_DATABASE
-        value: nombre_de_tu_bd
+        value: railway
       - key: DB_USERNAME
-        value: usuario
+        value: postgres
       - key: DB_PASSWORD
-        value: contraseña
+        value: ccpTbpqGdfkWFmMmuwYwbOOOfrzVfRyc
