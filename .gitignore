@@ -1,0 +1,25 @@
+# Laravel defaults
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+.env
+.phpunit.result.cache
+
+# IDEs y editores
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Otros
+npm-debug.log
+yarn-error.log
+.env.backup
+.env.local
+.env.production
+.env.testing
