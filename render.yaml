@@ -1,61 +1,43 @@
-envVars:
-  - key: APP_NAME
-    value: Laravel
-  - key: APP_ENV
-    value: production
-  - key: APP_KEY
-    value: base64:TSAmMNxO4gLbqLrfVs6yLklDwp6jqGL6EVpWx8wuah0=
-  - key: APP_DEBUG
-    value: false
-  - key: APP_URL
-    value: https://api-eliofitness.onrender.com
+services:
+  - type: web
+    name: api-eliofitness
+    env: php
+    plan: free
+    buildCommand: |
+      composer install --no-dev --optimize-autoloader
+      php artisan config:cache
+      php artisan migrate --force
+    startCommand: php artisan serve --host=0.0.0.0 --port=8080
+    envVars:
+      - key: APP_NAME
+        value: Laravel
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: base64:TSAmMNxO4gLbqLrfVs6yLklDwp6jqGL6EVpWx8wuah0=
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://api-eliofitness.onrender.com
 
-  - key: APP_LOCALE
-    value: en
-  - key: APP_FALLBACK_LOCALE
-    value: en
-  - key: APP_FAKER_LOCALE
-    value: en_US
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        value: shortline.proxy.rlwy.net
+      - key: DB_PORT
+        value: 35084
+      - key: DB_DATABASE
+        value: railway
+      - key: DB_USERNAME
+        value: postgres
+      - key: DB_PASSWORD
+        value: ccpTbpqGdfkWFmMmuwYwbOOOfrzVfRyc
 
-  - key: LOG_CHANNEL
-    value: stack
-  - key: LOG_STACK
-    value: single
-  - key: LOG_LEVEL
-    value: warning
-
-  - key: DB_CONNECTION
-    value: pgsql
-  - key: DB_HOST
-    value: shortline.proxy.rlwy.net
-  - key: DB_PORT
-    value: 35084
-  - key: DB_DATABASE
-    value: railway
-  - key: DB_USERNAME
-    value: postgres
-  - key: DB_PASSWORD
-    value: ccpTbpqGdfkWFmMmuwYwbOOOfrzVfRyc
-
-  - key: SESSION_DRIVER
-    value: database
-  - key: SESSION_LIFETIME
-    value: 120
-  - key: SESSION_ENCRYPT
-    value: false
-
-  - key: BROADCAST_CONNECTION
-    value: log
-  - key: FILESYSTEM_DISK
-    value: local
-  - key: QUEUE_CONNECTION
-    value: database
-  - key: CACHE_STORE
-    value: database
-
-  - key: MAIL_MAILER
-    value: log
-  - key: MAIL_FROM_ADDRESS
-    value: hello@example.com
-  - key: MAIL_FROM_NAME
-    value: Laravel
+      - key: LOG_CHANNEL
+        value: stack
+      - key: SESSION_DRIVER
+        value: database
+      - key: QUEUE_CONNECTION
+        value: database
+      - key: CACHE_STORE
+        value: database
