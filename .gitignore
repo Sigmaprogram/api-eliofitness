@@ -23,3 +23,6 @@ yarn-error.log
 .env.local
 .env.production
 .env.testing
+
+
+render.yaml
