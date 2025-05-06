@@ -271,3 +271,4 @@ Route::prefix('participaciones-reto')->group(function () {
     Route::get('/usuario/{usuario_id}', [ParticipacionRetoController::class, 'getByUsuario']);
     Route::get('/reto/{reto_id}', [ParticipacionRetoController::class, 'getByReto']);
 });
+

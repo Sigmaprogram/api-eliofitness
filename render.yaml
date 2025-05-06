@@ -23,15 +23,17 @@ services:
       - key: DB_CONNECTION
         value: pgsql
       - key: DB_HOST
-        value: shortline.proxy.rlwy.net
+        value: ep-crimson-star-a46c4g23-pooler.us-east-1.aws.neon.tech
       - key: DB_PORT
-        value: 35084
+        value: 5432
       - key: DB_DATABASE
-        value: railway
+        value: Eliofitnessdb
       - key: DB_USERNAME
-        value: postgres
+        value: Eliofitnessdb_owner
       - key: DB_PASSWORD
-        value: ccpTbpqGdfkWFmMmuwYwbOOOfrzVfRyc
+        value: npg_4XTUgwZL8QCm
+      - key: DB_SSLMODE
+        value: require
 
       - key: LOG_CHANNEL
         value: stack
